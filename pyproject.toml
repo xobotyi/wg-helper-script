@@ -3,14 +3,13 @@ name = "wg-helper-script"
 version = "0.1.0"
 description = "WireGuard helper CLI (configs, clients, QR)"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
 authors = [{ name = "Contributors" }]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
 requires-python = ">=3.11"
@@ -38,6 +37,9 @@ dev = [
 [build-system]
 requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
 
 [tool.uv]
 dev-dependencies = [

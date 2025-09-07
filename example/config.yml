@@ -1,0 +1,43 @@
+clients-path: clients
+server-path: server
+emit-qr: true
+amnezia:
+  enabled: true
+  Jc: '8'
+  Jmin: '13'
+  Jmax: '48'
+  S1: '142'
+  S2: '82'
+  H1: '613'
+  H2: '996'
+  H3: '67'
+  H4: '18'
+server:
+  name: wg0
+  address: 10.10.10.1/24
+  listen-port: 51821
+  mtu: 1380
+  dns: 1.1.1.1, 8.8.8.8
+  private-key: "<SERVER_PRIVATE_KEY_BASE64>"
+  public-key: "<SERVER_PUBLIC_KEY_BASE64>"
+  public-host: example.com
+clients:
+  # Example clients (use placeholders; generate real values locally)
+- name: alice
+  enabled: true
+  address: 10.10.10.2
+  private-key: "<CLIENT_PRIVATE_KEY_BASE64>"
+  public-key: "<CLIENT_PUBLIC_KEY_BASE64>"
+  preshared-key: "<CLIENT_PRESHARED_KEY_BASE64>"
+  persistent-keepalive: 25
+  created-at: '2025-01-01T00:00:00+00:00'
+  updated-at: '2025-01-01T00:00:00+00:00'
+- name: bob
+  enabled: false
+  address: 10.10.10.3
+  private-key: "<CLIENT_PRIVATE_KEY_BASE64>"
+  public-key: "<CLIENT_PUBLIC_KEY_BASE64>"
+  preshared-key: "<CLIENT_PRESHARED_KEY_BASE64>"
+  persistent-keepalive: 25
+  created-at: '2025-01-01T00:00:00+00:00'
+  updated-at: '2025-01-01T00:00:00+00:00'
